@@ -1,0 +1,993 @@
+None selected 
+
+Skip to content
+Using Crosstel, Inc. Mail with screen readers
+
+Conversations
+New look of Crossoft
+Inbox
+Ebby Kuriakose
+Summarize this email
+
+Ebby Kuriakose
+Attachments
+2:25 AM (7 hours ago)
+to Rish, Ditto, Don, me, Feby
+
+This is just a sample html with new look and feel that Claude Code created when I gave an image.  Image also attached. 
+
+ 
+
+Thanks and Regards
+
+
+Ebby Kuriakose
+
+ 
+
+ 
+
+ 2 Attachments
+  •  Scanned by Gmail
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account Details — Admin Console</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f0f2f7;
+    --sidebar-bg: #0f1623;
+    --sidebar-accent: #1e2d45;
+    --sidebar-active: #2563eb;
+    --sidebar-text: #94a3b8;
+    --sidebar-text-active: #f1f5f9;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+    --accent: #2563eb;
+    --accent-light: #eff6ff;
+    --accent-hover: #1d4ed8;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --input-bg: #f8fafc;
+    --input-border: #e2e8f0;
+    --input-focus: #2563eb;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    display: flex;
+    min-height: 100vh;
+    font-size: 14px;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    width: 240px;
+    background: var(--sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    z-index: 100;
+    overflow-y: auto;
+  }
+
+  .sidebar-logo {
+    padding: 24px 20px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-mark {
+    width: 32px; height: 32px;
+    background: var(--accent);
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+  }
+
+  .logo-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: #f1f5f9;
+    letter-spacing: -0.02em;
+  }
+
+  .sidebar-section {
+    padding: 20px 12px 8px;
+  }
+
+  .sidebar-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #475569;
+    padding: 0 8px;
+    margin-bottom: 6px;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 10px;
+    border-radius: var(--radius-sm);
+    color: var(--sidebar-text);
+    font-size: 13.5px;
+    font-weight: 450;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-decoration: none;
+    position: relative;
+    margin-bottom: 1px;
+  }
+
+  .nav-item:hover {
+    background: rgba(255,255,255,0.05);
+    color: #e2e8f0;
+  }
+
+  .nav-item.active {
+    background: rgba(37,99,235,0.15);
+    color: #93c5fd;
+  }
+
+  .nav-item.active::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 3px; height: 20px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+
+  .nav-icon {
+    width: 18px; height: 18px;
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+
+  .nav-item.active .nav-icon { opacity: 1; }
+
+  .nav-arrow {
+    margin-left: auto;
+    width: 14px;
+    height: 14px;
+    opacity: 0.4;
+  }
+
+  .nav-sub {
+    padding-left: 28px;
+  }
+
+  .nav-sub .nav-item {
+    font-size: 13px;
+    padding: 7px 10px;
+    color: #64748b;
+  }
+
+  .nav-sub .nav-item.active {
+    color: #93c5fd;
+    background: rgba(37,99,235,0.1);
+  }
+
+  .sidebar-bottom {
+    margin-top: auto;
+    padding: 16px 12px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .user-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .user-pill:hover { background: rgba(255,255,255,0.05); }
+
+  .avatar {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .user-info .user-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: #e2e8f0;
+  }
+
+  .user-info .user-role {
+    font-size: 11px;
+    color: #475569;
+  }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    position: fixed;
+    top: 0; left: 240px; right: 0;
+    height: 60px;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    z-index: 90;
+    box-shadow: var(--shadow);
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+  }
+
+  .breadcrumb .sep { color: var(--text-muted); font-size: 16px; }
+  .breadcrumb .current { color: var(--text-primary); font-weight: 500; }
+
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: var(--radius-sm);
+    padding: 8px 12px;
+    width: 220px;
+  }
+
+  .search-bar input {
+    background: none;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--text-primary);
+    width: 100%;
+  }
+
+  .search-bar input::placeholder { color: var(--text-muted); }
+
+  .icon-btn {
+    width: 36px; height: 36px;
+    border-radius: var(--radius-sm);
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all 0.15s;
+    position: relative;
+  }
+
+  .icon-btn:hover {
+    background: white;
+    border-color: #cbd5e1;
+    color: var(--text-primary);
+  }
+
+  .badge {
+    position: absolute;
+    top: -3px; right: -3px;
+    width: 8px; height: 8px;
+    background: #ef4444;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+
+  .timestamp {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+    background: var(--input-bg);
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+  }
+
+  /* ── MAIN CONTENT ── */
+  .main {
+    margin-left: 240px;
+    margin-top: 60px;
+    flex: 1;
+    padding: 28px;
+    min-height: calc(100vh - 60px);
+  }
+
+  .page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .page-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+  }
+
+  .page-subtitle {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 3px;
+  }
+
+  /* ── TABS ── */
+  .tab-bar {
+    display: flex;
+    gap: 2px;
+    background: var(--border);
+    padding: 3px;
+    border-radius: var(--radius-sm);
+    width: fit-content;
+    margin-bottom: 24px;
+  }
+
+  .tab {
+    padding: 7px 18px;
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .tab.active {
+    background: white;
+    color: var(--text-primary);
+    box-shadow: var(--shadow);
+  }
+
+  /* ── FORM HEADER ── */
+  .form-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  .acct-num-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+  }
+
+  .acct-num-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+  }
+
+  .acct-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .acct-input-wrap input {
+    width: 180px;
+    padding: 9px 14px;
+    border: 1.5px solid var(--input-border);
+    border-radius: var(--radius-sm);
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    background: var(--input-bg);
+    outline: none;
+    transition: border-color 0.15s;
+    letter-spacing: 0.05em;
+  }
+
+  .acct-input-wrap input:focus { border-color: var(--input-focus); background: white; }
+
+  .hint-badge {
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--warning);
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    padding: 4px 9px;
+    border-radius: 20px;
+  }
+
+  .account-type {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+  }
+
+  .type-option {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.15s;
+    background: var(--input-bg);
+  }
+
+  .type-option:hover { border-color: #93c5fd; color: var(--accent); background: var(--accent-light); }
+
+  .type-option.selected {
+    border-color: var(--accent);
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+
+  .type-dot {
+    width: 8px; height: 8px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    transition: all 0.15s;
+  }
+
+  .type-option.selected .type-dot {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .card-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card-title::before {
+    content: '';
+    width: 4px; height: 16px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+
+  /* ── FORM GRID ── */
+  .form-grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .field.span-2 { grid-column: span 2; }
+
+  label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.01em;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  select {
+    padding: 9px 12px;
+    border: 1.5px solid var(--input-border);
+    border-radius: var(--radius-sm);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 400;
+    color: var(--text-primary);
+    background: var(--input-bg);
+    outline: none;
+    transition: all 0.15s ease;
+    width: 100%;
+    -webkit-appearance: none;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="date"]:focus,
+  select:focus {
+    border-color: var(--input-focus);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.08);
+  }
+
+  input::placeholder { color: var(--text-muted); }
+
+  .select-wrapper {
+    position: relative;
+  }
+
+  .select-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 11px; top: 50%;
+    transform: translateY(-50%);
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid var(--text-muted);
+    pointer-events: none;
+  }
+
+  .select-wrapper select {
+    padding-right: 30px;
+    cursor: pointer;
+  }
+
+  /* Checkbox row */
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: var(--input-bg);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.15s;
+    grid-column: span 2;
+  }
+
+  .checkbox-row:hover { border-color: #93c5fd; background: var(--accent-light); }
+
+  .checkbox-row input[type="checkbox"] {
+    width: 16px; height: 16px;
+    accent-color: var(--accent);
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .checkbox-row span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+
+  /* ── FOOTER ROW ── */
+  .form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+
+  .btn {
+    padding: 10px 22px;
+    border-radius: var(--radius-sm);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .btn-ghost {
+    background: transparent;
+    border: 1.5px solid var(--border);
+    color: var(--text-secondary);
+  }
+
+  .btn-ghost:hover { background: var(--input-bg); border-color: #cbd5e1; color: var(--text-primary); }
+
+  .btn-primary {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.3);
+  }
+
+  .btn-primary:hover {
+    background: var(--accent-hover);
+    box-shadow: 0 4px 12px rgba(37,99,235,0.35);
+    transform: translateY(-1px);
+  }
+
+  .btn-primary:active { transform: translateY(0); }
+
+  /* ── DIVIDER ── */
+  .row-divider {
+    height: 1px;
+    background: var(--border);
+    grid-column: 1 / -1;
+    margin: 2px 0;
+  }
+
+  /* ── SVG ICONS ── */
+  svg { display: block; }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card { animation: fadeIn 0.3s ease both; }
+  .card:nth-child(2) { animation-delay: 0.05s; }
+  .card:nth-child(3) { animation-delay: 0.1s; }
+  .card:nth-child(4) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<!-- ── SIDEBAR ── -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-mark">A</div>
+    <span class="logo-text">AdminConsole</span>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-label">Configuration</div>
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" fill="none" viewBox="0 0 18 18" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="9" r="3"/><path d="M9 1v2M9 15v2M1 9h2M15 9h2M3.22 3.22l1.41 1.41M13.37 13.37l1.41 1.41M3.22 14.78l1.41-1.41M13.37 4.63l1.41-1.41"/></svg>
+      System Config
+      <svg class="nav-arrow" fill="none" viewBox="0 0 14 14" stroke="currentColor" stroke-width="1.8"><path d="M5 3l4 4-4 4"/></svg>
+    </a>
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" fill="none" viewBox="0 0 18 18" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="14" height="14" rx="2"/><path d="M6 9h6M9 6v6"/></svg>
+      Customer Config
+      <svg class="nav-arrow" fill="none" viewBox="0 0 14 14" stroke="currentColor" stroke-width="1.8"><path d="M5 3l4 4-4 4"/></svg>
+    </a>
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" fill="none" viewBox="0 0 18 18" stroke="currentColor" stroke-width="1.6"><path d="M9 1a4 4 0 100 8A4 4 0 009 1zM2 17a7 7 0 0114 0"/></svg>
+      User Accounts
+      <svg class="nav-arrow" fill="none" viewBox="0 0 14 14" stroke="currentColor" stroke-width="1.8"><path d="M5 3l4 4-4 4"/></svg>
+    </a>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-label">Accounts</div>
+    <a class="nav-item active" href="#">
+      <svg class="nav-icon" fill="none" viewBox="0 0 18 18" stroke="currentColor" stroke-width="1.6"><path d="M3 5h12M3 9h12M3 13h6"/></svg>
+      Accounts
+    </a>
+    <div class="nav-sub">
+      <a class="nav-item active" href="#">Create Account</a>
+      <a class="nav-item" href="#">Reserve Number</a>
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-label">Tools</div>
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" fill="none" viewBox="0 0 18 18" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="5"/><path d="M13 13l3 3"/></svg>
+      Search
+      <svg class="nav-arrow" fill="none" viewBox="0 0 14 14" stroke="currentColor" stroke-width="1.8"><path d="M5 3l4 4-4 4"/></svg>
+    </a>
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" fill="none" viewBox="0 0 18 18" stroke="currentColor" stroke-width="1.6"><path d="M2 14V6l7-4 7 4v8l-7 2z"/></svg>
+      Reports
+      <svg class="nav-arrow" fill="none" viewBox="0 0 14 14" stroke="currentColor" stroke-width="1.8"><path d="M5 3l4 4-4 4"/></svg>
+    </a>
+  </div>
+
+  <div class="sidebar-bottom">
+    <div class="user-pill">
+      <div class="avatar">T</div>
+      <div class="user-info">
+        <div class="user-name">Thomas</div>
+        <div class="user-role">Administrator</div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- ── TOPBAR ── -->
+<header class="topbar">
+  <div class="breadcrumb">
+    <span>Accounts</span>
+    <span class="sep">/</span>
+    <span class="current">Create Account</span>
+  </div>
+  <div class="topbar-right">
+    <div class="search-bar">
+      <svg width="14" height="14" fill="none" viewBox="0 0 14 14" stroke="#94a3b8" stroke-width="1.8"><circle cx="6" cy="6" r="4"/><path d="M10 10l2.5 2.5"/></svg>
+      <input type="text" placeholder="Quick search…">
+    </div>
+    <div class="icon-btn">
+      <svg width="16" height="16" fill="none" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.6"><path d="M8 1a5 5 0 015 5v3l1.5 1.5v1H1.5v-1L3 9V6a5 5 0 015-5zM6 13a2 2 0 004 0"/></svg>
+      <span class="badge"></span>
+    </div>
+    <div class="timestamp">30 Sep 2013 · 11:33</div>
+  </div>
+</header>
+
+<!-- ── MAIN ── -->
+<main class="main">
+  <div class="page-header">
+    <div>
+      <div class="page-title">Account Details</div>
+      <div class="page-subtitle">Create a new customer account — fill in all required fields below</div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tab-bar">
+    <div class="tab active">General</div>
+    <div class="tab">Billing</div>
+    <div class="tab">Services</div>
+    <div class="tab">Notes</div>
+  </div>
+
+  <!-- Account Number Row -->
+  <div class="form-header">
+    <div class="acct-num-group">
+      <label>Account Number</label>
+      <div class="acct-input-wrap">
+        <input type="text" placeholder="000000000" maxlength="9">
+        <span class="hint-badge">9 digits required</span>
+      </div>
+    </div>
+    <div class="account-type">
+      <div class="type-option selected">
+        <div class="type-dot"></div>Residential
+      </div>
+      <div class="type-option">
+        <div class="type-dot"></div>Business
+      </div>
+      <div class="type-option">
+        <div class="type-dot"></div>Government
+      </div>
+    </div>
+  </div>
+
+  <!-- Personal Information Card -->
+  <div class="card">
+    <div class="card-title">Personal Information</div>
+    <div class="form-grid grid-3">
+      <div class="field">
+        <label>Title</label>
+        <div class="select-wrapper">
+          <select><option>— Select —</option><option>Mr.</option><option>Mrs.</option><option>Ms.</option><option>Dr.</option></select>
+        </div>
+      </div>
+      <div class="field">
+        <label>First Name</label>
+        <input type="text" placeholder="First name">
+      </div>
+      <div class="field">
+        <label>Middle Name</label>
+        <input type="text" placeholder="Middle name">
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input type="text" placeholder="Last name">
+      </div>
+      <div class="field">
+        <label>Suffix</label>
+        <input type="text" placeholder="Jr., Sr., III…">
+      </div>
+      <div class="field">
+        <label>SSN</label>
+        <input type="text" placeholder="•••-••-••••">
+      </div>
+      <div class="field">
+        <label>Date of Birth</label>
+        <input type="date">
+      </div>
+      <div class="field">
+        <label>Email Address</label>
+        <input type="email" placeholder="name@example.com">
+      </div>
+      <div class="field">
+        <label>Contact Number</label>
+        <input type="text" placeholder="(000) 000-0000">
+      </div>
+      <div class="field">
+        <label>Bill Cycle</label>
+        <div class="select-wrapper">
+          <select><option>— Select —</option><option>Monthly</option><option>Quarterly</option><option>Annual</option></select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Service Address Card -->
+  <div class="card">
+    <div class="card-title">Service Address</div>
+    <div class="form-grid grid-4">
+      <div class="field">
+        <label>Street Number</label>
+        <input type="text" placeholder="e.g. 1234">
+      </div>
+      <div class="field">
+        <label>St. No. Suffix</label>
+        <input type="text" placeholder="½, A…">
+      </div>
+      <div class="field">
+        <label>Direction Prefix</label>
+        <div class="select-wrapper">
+          <select><option>— Select —</option><option>N</option><option>S</option><option>E</option><option>W</option><option>NE</option><option>NW</option><option>SE</option><option>SW</option></select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Direction Suffix</label>
+        <div class="select-wrapper">
+          <select><option>— Select —</option><option>N</option><option>S</option><option>E</option><option>W</option></select>
+        </div>
+      </div>
+      <div class="field span-2">
+        <label>Street Name</label>
+        <input type="text" placeholder="Street name">
+      </div>
+      <div class="field">
+        <label>Street Type</label>
+        <div class="select-wrapper">
+          <select><option>— Select —</option><option>Ave</option><option>Blvd</option><option>Ct</option><option>Dr</option><option>Ln</option><option>Pl</option><option>Rd</option><option>St</option></select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Unit Type</label>
+        <div class="select-wrapper">
+          <select><option>— Select —</option><option>Apt</option><option>Ste</option><option>Unit</option><option>Fl</option></select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Unit Number</label>
+        <input type="text" placeholder="e.g. 4B">
+      </div>
+      <div class="field">
+        <label>State</label>
+        <div class="select-wrapper">
+          <select><option>— Select —</option><option>AL</option><option>GA</option><option>FL</option><option>NY</option><option>TX</option><option>CA</option></select>
+        </div>
+      </div>
+      <div class="field">
+        <label>City</label>
+        <div class="select-wrapper">
+          <select><option>— Select —</option><option>Atlanta</option><option>Savannah</option><option>Augusta</option></select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Zip Code</label>
+        <input type="text" placeholder="00000">
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="billSame" checked>
+        <label for="billSame" style="font-size:13px;font-weight:500;color:var(--text-secondary);cursor:pointer;letter-spacing:0;">Billing address same as service address</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Card -->
+  <div class="card">
+    <div class="card-title">Settings</div>
+    <div class="form-grid grid-4">
+      <div class="field span-2">
+        <label>Time Zone</label>
+        <div class="select-wrapper">
+          <select>
+            <option selected>America/New_York (EST)</option>
+            <option>America/Chicago (CST)</option>
+            <option>America/Denver (MST)</option>
+            <option>America/Los_Angeles (PST)</option>
+          </select>
+        </div>
+      </div>
+      <div class="field span-2">
+        <label>Market</label>
+        <div class="select-wrapper">
+          <select>
+            <option selected>Atlanta</option>
+            <option>Chicago</option>
+            <option>Dallas</option>
+            <option>New York</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-footer">
+      <button class="btn btn-ghost">Clear Form</button>
+      <button class="btn btn-primary">
+        <svg width="14" height="14" fill="none" viewBox="0 0 14 14" stroke="currentColor" stroke-width="2"><path d="M11.5 4.5L5.5 10.5 2.5 7.5"/></svg>
+        Verify Address
+      </button>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  // Account type toggle
+  document.querySelectorAll('.type-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      document.querySelectorAll('.type-option').forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+    });
+  });
+
+  // Tab switching
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
+Test_crossoft.html
